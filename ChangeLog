@@ -1,0 +1,455 @@
+2014-02-04 18:10 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (cb5b0493b8fc [tip])
+
+	* .hgtags: new file.
+	* .hgtags:
+	Added tag 0.01 for changeset 7b59b2f0941b
+
+2014-02-04 18:10 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (7b59b2f0941b [0.01])
+
+	* Changes, lib/IPC/PrettyPipe.pm:
+	update logs and version for release
+
+2014-02-04 18:07 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (d473d34fe90a)
+
+	* Makefile.PL:
+	add some metadata to distribution
+
+2014-02-04 18:03 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (32775505d8b6)
+
+	* MANIFEST.SKIP:
+	cleanup manifest
+
+2014-02-04 18:02 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (7641377adac7)
+
+	* ChangeLog: deleted file.
+	* ChangeLog:
+	don't track ChangeLog; it is a derived product
+
+2014-02-04 17:43 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (3ead4913f4d4)
+
+	* .hgtags: deleted file.
+	* .hgtags:
+	remove .hgtags as it was associated with the project from which this
+	was forked, namely IPC::PipeC.
+
+2014-02-04 17:58 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (c6e58e3e856e)
+
+	* README, lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Arg.pm,
+	lib/IPC/PrettyPipe/Arg/Format.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/DSL.pm, lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Executor.pm, lib/IPC/PrettyPipe/Format.pm,
+	lib/IPC/PrettyPipe/Queue.pm, lib/IPC/PrettyPipe/Queue/Element.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Renderer.pm, lib/IPC/PrettyPipe/Stream.pm,
+	lib/IPC/PrettyPipe/Stream/Utils.pm, lib/IPC/PrettyPipe/Types.pm:
+	update license and copyright date
+
+2014-02-04 17:33 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (4968fe923a2a)
+
+	* Makefile.PL:
+	update dependency requirements
+
+2014-02-04 17:33 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (4f3035cb3ec6)
+
+	* lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Arg.pm,
+	lib/IPC/PrettyPipe/Arg/Format.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/DSL.pm, lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Executor.pm, lib/IPC/PrettyPipe/Queue.pm,
+	lib/IPC/PrettyPipe/Queue/Element.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Renderer.pm, lib/IPC/PrettyPipe/Stream.pm,
+	lib/IPC/PrettyPipe/Stream/Utils.pm, lib/IPC/PrettyPipe/Types.pm, xt
+	/pod-coverage.t:
+	documentation, pod coverage, and perl critic updates
+
+2014-02-04 17:32 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (a97689673c71)
+
+	* lib/IPC/PrettyPipe/Stream.pm:
+	make private attribute name private to quiet pod-coverage
+
+2014-02-04 17:30 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (f6e78cf8c45b)
+
+	* lib/IPC/PrettyPipe/DSL.pm:
+	wrong attribute names passed to constructor
+
+2014-01-31 00:44 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (a67009ae94c2)
+
+	* Makefile.PL, t/IPC/PrettyPipe/Render/Test.pm:
+	remove remnant Params::Check usage
+
+2014-01-31 00:44 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (d9bab1ea2002)
+
+	* lib/IPC/PrettyPipe/Cmd.pm:
+	remove rogue DB::single
+
+2014-01-31 00:41 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (3baecf0b6805)
+
+	* lib/IPC/PrettyPipe/Types.pm: new file.
+	* lib/IPC/PrettyPipe/Check.pm: deleted file.
+	* Makefile.PL, lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Arg.pm,
+	lib/IPC/PrettyPipe/Arg/Format.pm, lib/IPC/PrettyPipe/Check.pm,
+	lib/IPC/PrettyPipe/Cmd.pm, lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Format.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Stream.pm, lib/IPC/PrettyPipe/Types.pm,
+	t/IPC/PrettyPipe/Render/Test.pm, t/cmd/iface.t, t/dsl/cmd.t:
+	switch to Type::Tiny from MooX::Types::MooseLike and Params::Check
+
+2014-01-27 20:02 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (ab0c935571c7)
+
+	* lib/IPC/PrettyPipe/Arg/Format.pm, lib/IPC/PrettyPipe/DSL.pm,
+	lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Executor.pm, lib/IPC/PrettyPipe/Format.pm,
+	lib/IPC/PrettyPipe/Queue.pm, lib/IPC/PrettyPipe/Queue/Element.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Renderer.pm, lib/IPC/PrettyPipe/Stream/Utils.pm,
+	t/IPC/PrettyPipe/Render/Test.pm, t/cmd/render.t.old, t/dsl/arg.t,
+	t/dsl/cmd.t, t/dsl/iface.t, t/dsl/ppipe.t, t/lib/My/Tests.pm,
+	t/ppipe/plugins.t, t/render/multiple.t, t/render/render.t,
+	t/run/t1.t, t/run/test.3, t/run/testprog.pl, t/run/utils.pm,
+	t/stream/parse_spec.t, xt/nobreakpoints.t: new file.
+	* t/cmd/render.t, t/stream/parse_op.t, t/stream/render.t: deleted
+	file.
+	* MANIFEST.SKIP, Makefile.PL, lib/IPC/PrettyPipe.pm,
+	lib/IPC/PrettyPipe/Arg.pm, lib/IPC/PrettyPipe/Arg/Format.pm,
+	lib/IPC/PrettyPipe/Check.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/DSL.pm, lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Executor.pm, lib/IPC/PrettyPipe/Format.pm,
+	lib/IPC/PrettyPipe/Queue.pm, lib/IPC/PrettyPipe/Queue/Element.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Renderer.pm, lib/IPC/PrettyPipe/Stream.pm,
+	lib/IPC/PrettyPipe/Stream/Utils.pm, t/IPC/PrettyPipe/Render/Test.pm,
+	t/arg/iface.t, t/arg/render.t, t/cmd/iface.t, t/cmd/render.t,
+	t/cmd/render.t.old, t/cmd/val.t, t/dsl/arg.t, t/dsl/cmd.t,
+	t/dsl/iface.t, t/dsl/ppipe.t, t/lib/My/Tests.pm, t/ppipe/iface.t,
+	t/ppipe/plugins.t, t/ppipe/val.t, t/render/multiple.t,
+	t/render/render.t, t/run/t1.t, t/run/test.3, t/run/testprog.pl,
+	t/run/utils.pm, t/stream/iface.t, t/stream/parse_op.t,
+	t/stream/parse_spec.t, t/stream/render.t, xt/nobreakpoints.t:
+	massive code reorganization + new tests
+
+2012-09-18 10:46 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (ec422cac4d92)
+
+	* t/stream/export.t: deleted file.
+	* t/stream/export.t, t/stream/parse_op.t:
+	parse_op is now public; use that again. add tests for operator param
+	recognition
+
+2012-09-18 10:46 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (8a344294434c)
+
+	* lib/IPC/PrettyPipe/Stream.pm:
+	explicitly set elements of %opc, rather than deleting unwanted
+	elements of %+
+
+2012-09-17 17:43 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (572356559c75)
+
+	* lib/IPC/PrettyPipe.pm, t/ppipe/iface.t:
+	add() method didn't allow adding ::Cmd objects directly
+
+2012-09-17 15:02 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (138e23d3bd12)
+
+	* t/stream/export.t: new file.
+	* lib/IPC/PrettyPipe/Stream.pm, t/stream/export.t, t/stream/iface.t:
+	Stream::parse_op now determines if an additional parameter (e.g.
+	file name) is needed for the stream
+
+2012-09-17 15:01 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (6bc600934386)
+
+	* lib/IPC/PrettyPipe/Stream.pm:
+	rename _parse_op as parse_op and export
+
+2012-09-17 14:54 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (8c07de2c80ca)
+
+	* .hgignore:
+	ignore blib
+
+2012-09-17 13:56 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (b7e05fc6a394)
+
+	* lib/IPC/PrettyPipe/Arg.pm, lib/IPC/PrettyPipe/Check.pm,
+	lib/IPC/PrettyPipe/Stream.pm, t/arg/iface.t, t/arg/render.t,
+	t/arg/val.t, t/cmd/iface.t, t/cmd/render.t, t/cmd/val.t,
+	t/ppipe/iface.t, t/ppipe/val.t, t/stream/iface.t,
+	t/stream/parse_op.t, t/stream/render.t: new file.
+	* t/run.t: deleted file.
+	* Makefile.PL, lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Arg.pm,
+	lib/IPC/PrettyPipe/Check.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/Stream.pm, t/arg/iface.t, t/arg/render.t,
+	t/arg/val.t, t/cmd/iface.t, t/cmd/render.t, t/cmd/val.t,
+	t/ppipe/iface.t, t/ppipe/val.t, t/run.t, t/stream/iface.t,
+	t/stream/parse_op.t, t/stream/render.t:
+	further process in reworking IPC::PipeC
+
+	* separate objects for arguments and streams
+	* test sutite
+
+2012-09-17 12:30 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (63c7adf6c035)
+
+	* xt/perlcritic.t, xt/pod-coverage.t, xt/pod.t: new file.
+	* t/perlcritic.t, t/pod-coverage.t, t/pod.t: deleted file.
+	* t/perlcritic.t, t/pod-coverage.t, t/pod.t, xt/perlcritic.t, xt/pod-
+	coverage.t, xt/pod.t:
+	make pod and perlcritic tests author tests
+
+2012-09-11 17:11 -0400  Diab Jerius  <djerius@cfa.harvard.edu>  (ce20936a5b97)
+
+	* lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Cmd.pm: new file.
+	* lib/IPC/PipeC.pm, lib/IPC/PipeC/Cmd.pm: deleted file.
+	* Changes, Makefile.PL, README, lib/IPC/PipeC.pm,
+	lib/IPC/PipeC/Cmd.pm, lib/IPC/PrettyPipe.pm,
+	lib/IPC/PrettyPipe/Cmd.pm, t/00-load.t, t/run.t:
+	official fork point from IPC::PipeC
+
+2012-01-19 18:09 -0500  djerius  <djerius@cfa.harvard.edu>  (4d415118426c)
+
+	* .hgtags:
+	Added tag 1.21 for changeset 03b4db934d42
+
+2011-11-16 17:04 -0500  djerius  <djerius@cfa.harvard.edu>  (03b4db934d42)
+
+	* ChangeLog, Changes, lib/IPC/PipeC.pm:
+	update logs and version for release
+
+2011-11-16 17:03 -0500  djerius  <djerius@cfa.harvard.edu>  (e212e15b6770)
+
+	* lib/IPC/PipeC.pm:
+	added internal debug flag to pass to IPC::Run
+
+2010-03-16 11:31 -0400  djerius  <djerius@cfa.harvard.edu>  (ad2b47dd69df)
+
+	* .hgtags:
+	Added tag 1.20 for changeset 4c3b7f6e0259
+
+2010-03-16 11:27 -0400  djerius  <djerius@cfa.harvard.edu>  (4c3b7f6e0259)
+
+	* ChangeLog, Changes, lib/IPC/PipeC.pm:
+	update logs and version for release
+
+2010-03-12 17:25 -0500  djerius  <djerius@cfa.harvard.edu>  (61febe7fb126)
+
+	* INSTALL: deleted file.
+	* INSTALL:
+	remove old cruft
+
+2010-03-12 17:25 -0500  djerius  <djerius@cfa.harvard.edu>  (70c698382de5)
+
+	* LICENSE:
+	update to GPL v3
+
+2010-03-12 17:20 -0500  djerius  <djerius@cfa.harvard.edu>  (305dd1bc7027)
+
+	* t/00-load.t, t/perlcritic.t, t/pod-coverage.t, t/pod.t, t/run.t: new
+	file.
+	* t/PipeC.t, t/test.pl: deleted file.
+	* Makefile.PL, lib/IPC/PipeC.pm, lib/IPC/PipeC/Cmd.pm, t/00-load.t,
+	t/PipeC.t, t/perlcritic.t, t/pod-coverage.t, t/pod.t, t/run.t,
+	t/test.pl:
+	modernized tests, use IPC::Run instead of the shell to run the
+	pipeline
+
+2010-03-11 17:44 -0500  djerius  <djerius@cfa.harvard.edu>  (75a1b0f85bac)
+
+	* lib/IPC/PipeC.pm, lib/IPC/PipeC/Cmd.pm: new file.
+	* GNUmakefile.local, MANIFEST, lib/PipeC.pm, lib/PipeC/Cmd.pm: deleted
+	file.
+	* GNUmakefile.local, MANIFEST, Makefile.PL, README, lib/IPC/PipeC.pm,
+	lib/IPC/PipeC/Cmd.pm, lib/PipeC.pm, lib/PipeC/Cmd.pm, t/PipeC.t:
+	rename to IPC::PipeC. use Module::Install
+
+2006-09-20 16:39 -0400  dj  <dj@macabre.cfa.harvard.edu>  (a415e00e5f50)
+
+	* .hgtags:
+	Added tag 1.11 for changeset
+	a0f84d3681b3d08b4e146e134c6781389e66fc9f
+
+2006-09-20 16:38 -0400  dj  <dj@macabre.cfa.harvard.edu>  (a0f84d3681b3)
+
+	* ChangeLog, Changes, lib/PipeC.pm:
+	bump version, update changelog for release
+
+2006-09-20 16:37 -0400  dj  <dj@macabre.cfa.harvard.edu>  (52788c5648f3)
+
+	* README, lib/PipeC.pm, lib/PipeC/Cmd.pm:
+	added license/copyright info
+
+2006-09-19 16:51 -0400  dj  <dj@macabre.cfa.harvard.edu>  (67d68057773b)
+
+	* .hgtags:
+	Added tag 1.10 for changeset
+	88340895b7c9084e89821eb8d6b41c1d1b8a1c86
+
+2006-09-19 16:51 -0400  dj  <dj@macabre.cfa.harvard.edu>  (88340895b7c9)
+
+	* ChangeLog, Changes:
+	updated for release
+
+2006-09-19 16:02 -0400  dj  <dj@macabre.cfa.harvard.edu>  (3c23a6c98758)
+
+	* lib/PipeC.pm, lib/PipeC/Cmd.pm:
+	updated error messages to use __PACKAGE__
+
+2006-09-19 15:40 -0400  dj  <dj@macabre.cfa.harvard.edu>  (53df7a73c321)
+
+	* lib/PipeC.pm, lib/PipeC/Cmd.pm, t/PipeC.t, t/test.pl: new file.
+	* PipeC.pm, test.pl: deleted file.
+	* MANIFEST, MANIFEST.SKIP, Makefile.PL, PipeC.pm, lib/PipeC.pm,
+	lib/PipeC/Cmd.pm, t/PipeC.t, t/test.pl, test.pl:
+	modernified the package layout; split PipeC::Cmd out of PipeC.pm.
+	updated docs.
+
+2006-09-19 15:55 +0000  dj  <dj>  (74262bb7a053)
+
+	* ChangeLog: new file.
+	* ChangeLog:
+	added ChangeLog
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (afd3df4c5cd3)
+
+	* .hgtags:
+	Added tag V1_09 for changeset
+	bf95dafb08bba81f2cbfae8bb21d2c7ea2959b0c
+
+2004-10-18 23:35 +0000  gaetz  <gaetz>  (bf95dafb08bb)
+
+	* GNUmakefile.local: new file.
+	* GNUmakefile: deleted file.
+	* Changes, GNUmakefile, GNUmakefile.local, PipeC.pm:
+	Empty changelog
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (0b49ecb426ab)
+
+	* .hgtags:
+	Added tag V1_08 for changeset
+	eaf9f8563a3c63ff9000997a77f1953cc5999860
+
+2002-11-18 21:22 +0000  dj  <dj>  (eaf9f8563a3c)
+
+	* Changes, PipeC.pm:
+	added dumprun
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (0f1f05c86e8e)
+
+	* .hgtags:
+	Added tag V1_07 for changeset
+	4aded5e5e070b00976a23a42e33106de4ffe51b0
+
+2002-04-12 21:19 +0000  dj  <dj>  (4aded5e5e070)
+
+	* LICENSE, MANIFEST.SKIP, README: new file.
+	* Changes, LICENSE, MANIFEST, MANIFEST.SKIP, PipeC.pm, README,
+	test.pl:
+	added stderr2stdout()
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (608a6e1a2723)
+
+	* .hgtags:
+	Added tag V1_06 for changeset
+	78775f597e0a015527c74c894115a22ba80a69c0
+
+2001-02-01 20:35 +0000  dj  <dj>  (78775f597e0a)
+
+	* PipeC.pm, test.pl:
+	cleaned up escaped output to use far less backslashes
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (45773f476635)
+
+	* .hgtags:
+	Added tag V1_05 for changeset
+	fd999197d1c03743f0cfa9d8dfdc0a710225235f
+
+2001-01-31 00:06 +0000  dj  <dj>  (fd999197d1c0)
+
+	* Changes, PipeC.pm:
+	added <>& to magic characters
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (8a7fddb72111)
+
+	* .hgtags:
+	Added tag V1_04 for changeset
+	a2a639b9d3113355f786c83248a6962a30baca95
+
+2000-08-14 22:05 +0000  dj  <dj>  (a2a639b9d311)
+
+	* Changes:
+	Empty changelog
+
+2000-08-14 22:04 +0000  dj  <dj>  (85702b68a0d5)
+
+	* GNUmakefile: new file.
+	* Changes, GNUmakefile, INSTALL, PipeC.pm, test.pl:
+	fixes to magic chars, new GNUmakefile, INSTALL
+
+2000-03-13 02:41 +0000  dj  <dj>  (fad6f370009c)
+
+	* PipeC.pm, test.pl:
+	introduced change in behavior with addition of firstvalue to valrep.
+
+	previously, if only one match was made and lastvalue was specified,
+	lastvalue would prevail. the bogus behavior was that lastvalue was
+	only used if nmatch > 1. now, if nmatch = 1 and firstvalue isn't
+	specified, it is set to lastvalue. this reestablishes the old
+	behavior.
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (c9713f69e105)
+
+	* .hgtags:
+	Added tag V1_03 for changeset
+	d5ca2bdc1c6e58a17f9a76d9e75b7658d343f8f9
+
+2000-03-13 01:32 +0000  dj  <dj>  (d5ca2bdc1c6e)
+
+	* test.pl: new file.
+	* PipeC.pm, test.pl:
+	add firstvalue to valrep functions
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (46c12778f4c3)
+
+	* .hgtags:
+	Added tag V1_02 for changeset
+	90bb541fcf96330d34b215d5129e57e8669ba6df
+
+2000-01-21 14:55 +0000  dj  <dj>  (90bb541fcf96)
+
+	* PipeC.pm:
+	Empty changelog
+
+2000-01-19 21:57 +0000  dj  <dj>  (01f35bbe0f2d)
+
+	* Changes, MANIFEST, Makefile.PL: new file.
+	* GNUmakefile: deleted file.
+	* Changes, GNUmakefile, INSTALL, MANIFEST, Makefile.PL:
+	Empty changelog
+
+1999-04-09 17:49 +0000  dj  <dj>  (97d868593d32)
+
+	* PipeC.pm:
+	handles empty arguments to options in a manner compatible with the
+	perl parameter library
+
+1999-03-24 19:14 +0000  dj  <dj>  (498ec56c6ccd)
+
+	* PipeC.pm:
+	semicolons weren't being recognized as shell meta-characters
+
+1999-03-16 21:39 +0000  dj  <dj>  (6fefd60d74bb)
+
+	* PipeC.pm:
+	added ability to set attributes in PipeC::add
+
+1999-03-12 19:48 +0000  dj  <dj>  (cc209be83bce)
+
+	* PipeC.pm:
+	valrep prematurely gave up on the lastvalue
+
+2006-09-19 11:56 -0400  dj  <dj@macabre.cfa.harvard.edu>  (43020a010586)
+
+	* .hgtags: new file.
+	* .hgtags:
+	Added tag initial for changeset
+	aae8666463f168b260b9e5a079cdab53805dbf97
+
+1999-03-11 17:17 +0000  dj  <dj>  (aae8666463f1)
+
+	* .hgignore, GNUmakefile, INSTALL, PipeC.pm: new file.
+	* .hgignore, GNUmakefile, INSTALL, PipeC.pm:
+	Initial revision
+
