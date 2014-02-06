@@ -1,4 +1,24 @@
-2014-02-04 18:10 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (cb5b0493b8fc [tip])
+2014-02-05 19:08 -0500  djerius  <djerius@cfa.harvard.edu>  (6da7a87fa84f [tip])
+
+	* .hgtags:
+	Added tag 0.01_01 for changeset f54469ba7068
+
+2014-02-05 19:07 -0500  djerius  <djerius@cfa.harvard.edu>  (f54469ba7068 [0.01_01])
+
+	* Changes, MANIFEST.SKIP, README, lib/IPC/PrettyPipe.pm:
+	update logs and version for release
+
+2014-02-05 18:26 -0500  djerius  <djerius@cfa.harvard.edu>  (a71d46ba48f9)
+
+	* Makefile.PL, t/run/t1.t:
+	switch from Probe::Perl to Devel::FindPerl
+
+2014-02-05 14:21 -0500  djerius  <djerius@cfa.harvard.edu>  (b5340b6b4e25)
+
+	* t/render/render.t:
+	remove forgotten debug statement
+
+2014-02-04 18:10 -0500  Diab Jerius  <djerius@cfa.harvard.edu>  (cb5b0493b8fc)
 
 	* .hgtags: new file.
 	* .hgtags:
