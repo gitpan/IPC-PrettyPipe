@@ -1,4 +1,53 @@
-2014-02-05 19:08 -0500  djerius  <djerius@cfa.harvard.edu>  (6da7a87fa84f [tip])
+2014-02-07 06:17 -0500  djerius  <djerius@cfa.harvard.edu>  (5282c00d4fbe [tip])
+
+	* .hgtags:
+	Added tag 0.01_02 for changeset e4aac3c77db3
+
+2014-02-07 06:17 -0500  djerius  <djerius@cfa.harvard.edu>  (e4aac3c77db3 [0.01_02])
+
+	* Changes, lib/IPC/PrettyPipe.pm:
+	update logs and version for release
+
+2014-02-07 06:15 -0500  djerius  <djerius@cfa.harvard.edu>  (3795e62655a2)
+
+	* t/run/t1.t:
+	On win32, skip tests which redirect fd>2, as IPC::Run can't do that
+
+2014-02-06 23:04 -0500  djerius  <djerius@cfa.harvard.edu>  (9b4d93abd301)
+
+	* lib/IPC/PrettyPipe/Arg.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/DSL.pm, lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Queue/Element.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Stream.pm:
+	remove links in pod NAME sections to clean up HTML page titles
+
+2014-02-06 22:28 -0500  djerius  <djerius@cfa.harvard.edu>  (4fdfb221512c)
+
+	* lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/DSL.pm, lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Executor.pm, lib/IPC/PrettyPipe/Renderer.pm,
+	lib/IPC/PrettyPipe/Stream.pm:
+	minor documentation fixes
+
+2014-02-06 20:53 -0500  djerius  <djerius@cfa.harvard.edu>  (7ce5ade0fbdf)
+
+	* lib/IPC/PrettyPipe/Arg.pm, lib/IPC/PrettyPipe/DSL.pm,
+	lib/IPC/PrettyPipe/Execute/IPC/Run.pm,
+	lib/IPC/PrettyPipe/Executor.pm, lib/IPC/PrettyPipe/Queue.pm,
+	lib/IPC/PrettyPipe/Queue/Element.pm,
+	lib/IPC/PrettyPipe/Render/Template/Tiny.pm,
+	lib/IPC/PrettyPipe/Renderer.pm, lib/IPC/PrettyPipe/Stream.pm,
+	lib/IPC/PrettyPipe/Stream/Utils.pm:
+	fix copyright date
+
+2014-02-06 20:18 -0500  djerius  <djerius@cfa.harvard.edu>  (28fc428718ab)
+
+	* lib/IPC/PrettyPipe.pm, lib/IPC/PrettyPipe/Cmd.pm,
+	lib/IPC/PrettyPipe/DSL.pm:
+	fix bad links in pod (RT#92740)
+
+2014-02-05 19:08 -0500  djerius  <djerius@cfa.harvard.edu>  (6da7a87fa84f)
 
 	* .hgtags:
 	Added tag 0.01_01 for changeset f54469ba7068

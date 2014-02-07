@@ -146,7 +146,7 @@ __END__
 
 =head1 NAME
 
-B<IPC::PrettyPipe::DSL> - shortcuts to building an B<L<IPC::PrettyPipe>> object
+B<IPC::PrettyPipe::DSL> - shortcuts to building an B<IPC::PrettyPipe> object
 
 =head1 SYNOPSIS
 
@@ -202,10 +202,10 @@ Arguments which are options may have I<prefixes>, and options which
 have values may have their names separated from their values by a
 I<separator> string.
 
-The B<ppipe>, B<ppcmd>, and B<pparg> functions are used to create
+The B<L</ppipe>>, B<L</ppcmd>>, and B<L</pparg>> functions are used to create
 pipelines, commands, and arguments.
 
-The B<argpfx>, and B<argsep> functions are used to change the argument
+The B<L</argpfx>>, and B<L</argsep>> functions are used to change the argument
 prefix and separator strings.  Calls to these are embeded in lists of
 arguments and commands, and change the argument prefixes and separator
 strings for the succeeding entries.  These are called I<argument
@@ -214,7 +214,7 @@ Modifiers>.
 
 To specify stream redirection for either pipelines or commands, insert
 either a B<L<IPC::PrettyPipe::Stream>> object or a string stream
-specification (see L<IPC::PrettyPipe::Stream::Util/Stream
+specification (see L<IPC::PrettyPipe::Stream::Utils/Stream
 Specification>).  If the redirection requires another parameter, it
 should immediately follow the object or string specification.
 
@@ -263,7 +263,7 @@ should immediately follow the object or string specification.
 
 
 
-B<ppipe> creates an B<IPC::PrettyPipe> object.  It is passed (in order)
+B<ppipe> creates an B<L<IPC::PrettyPipe>> object.  It is passed (in order)
 
 =over
 
@@ -317,7 +317,7 @@ and arguments which follow.
 
 =item *
 
-A stream specification (L<IPC::PrettyPipe::Stream::Util/Stream
+A stream specification (L<IPC::PrettyPipe::Stream::Utils/Stream
 Specification>), or an B<L<IPC::PrettyPipe::Stream>> object. If the
 specification requires an additional parameter, the next value in
 C<@args> is used.
@@ -377,7 +377,7 @@ command in a random order;
 =item *
 
 B<L<IPC::PrettyPipe::Stream>> objects or stream specifications
-(L<IPC::PrettyPipe::Stream::Util/Stream Specification>).  If the
+(L<IPC::PrettyPipe::Stream::Utils/Stream Specification>).  If the
 specification requires an additional parameter, the next value in
 C<@cmd_args> will be used for that parameter.
 
@@ -420,7 +420,7 @@ An optional value.
   $stream = ppstream $spec;
   $stream = ppstream $spec, $file;
 
-B<ppstream> creates an B<IPC::PrettyPipe::Stream> object.
+B<ppstream> creates an B<L<IPC::PrettyPipe::Stream>> object.
 It is passed (in order):
 
 =over
@@ -480,7 +480,7 @@ For example, after the above code is run, the following holds:
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2013 Smithsonian Astrophysical Observatory
+Copyright 2014 Smithsonian Astrophysical Observatory
 
 This software is released under the GNU General Public License.  You
 may find a copy at

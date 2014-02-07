@@ -178,7 +178,7 @@ __END__
 
 =head1 NAME
 
-B<IPC::PrettyPipe::Render::Template::Tiny> - rendering backend using B<L<Template::Tiny>>
+B<IPC::PrettyPipe::Render::Template::Tiny> - rendering backend using B<Template::Tiny>
 
 =head1 SYNOPSIS
 
@@ -345,7 +345,7 @@ stored as a hashref with the following default contents:
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2013 Smithsonian Astrophysical Observatory
+Copyright 2014 Smithsonian Astrophysical Observatory
 
 This software is released under the GNU General Public License.  You
 may find a copy at

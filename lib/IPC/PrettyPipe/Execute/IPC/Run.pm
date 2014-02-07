@@ -127,7 +127,7 @@ with 'IPC::PrettyPipe::Executor';
 
 =head1 NAME
 
-B<IPC::PrettyPipe::Execute::IPC::Run> - execution backend using B<L<IPC::Run>>
+B<IPC::PrettyPipe::Execute::IPC::Run> - execution backend using B<IPC::Run>
 
 =head1 SYNOPSIS
 
@@ -159,19 +159,19 @@ file descriptors are properly restored.
 
 =over
 
-=item C<run>
+=item B<run>
 
 Run the pipeline.
 
-=item C<start>
+=item B<start>
 
 Invoke the B<L<IPC::Run>> B<L<start|IPC::Run/start>> method.
 
-=item C<pump>
+=item B<pump>
 
 Invoke the B<L<IPC::Run>> B<L<pump|IPC::Run/pump>> method.
 
-=item C<finish>
+=item B<finish>
 
 Invoke the B<L<IPC::Run>> B<L<finish|IPC::Run/finish>> method.
 
@@ -180,7 +180,7 @@ Invoke the B<L<IPC::Run>> B<L<finish|IPC::Run/finish>> method.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2013 Smithsonian Astrophysical Observatory
+Copyright 2014 Smithsonian Astrophysical Observatory
 
 This software is released under the GNU General Public License.  You
 may find a copy at

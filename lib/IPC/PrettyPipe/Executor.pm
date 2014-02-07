@@ -31,7 +31,7 @@ __END__
 
 =head1 NAME
 
-IPC::PrettyPipe::Executor - role for executor backends
+B<IPC::PrettyPipe::Executor> - role for executor backends
 
 =head1 SYNOPSIS
 
@@ -62,7 +62,7 @@ Execute the pipeline.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2013 Smithsonian Astrophysical Observatory
+Copyright 2014 Smithsonian Astrophysical Observatory
 
 This software is released under the GNU General Public License.  You
 may find a copy at

@@ -48,4 +48,4 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=IPC-PrettyPipe
   license: http://opensource.org/licenses/gpl-3.0.html
   repository: http://bitbucket.org/djerius/ipc-prettypipe
-version: 0.01_01
+version: 0.01_02

@@ -23,7 +23,7 @@ package IPC::PrettyPipe;
 
 ## no critic (RequireUseStrict)
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.01_02';
 
 use Carp;
 
@@ -536,13 +536,13 @@ Create a new C<IPC::PrettyPipe> object. The available attributes are:
 
 =over
 
-=item cmds
+=item C<cmds>
 
 I<Optional>. The value should be an arrayref of commands to load into
 the pipe.  The contents of the array are passed to the B<L</ffadd>>
 method for processing.
 
-=item argpfx, argsep
+=item C<argpfx>, C<argsep>
 
 I<Optional>.  The default prefix and separation attributes for
 arguments to commands.  See B<L<IPC::PrettyPipe::Arg>> for more
@@ -554,14 +554,14 @@ I<Optional>. An B<L<IPC::PrettyPipe::Arg::Format>> object specifying
 the default prefix and separation attributes for arguments to
 commands.  May be overridden by C<L</argpfx>> and C<L</argsep>>.
 
-=item executor
+=item C<executor>
 
 I<Optional>. The means by which the pipeline will be executed.  It may
 be either a class name or an object reference, and must consume the
 B<L<IPC::PrettyPipe::Executor>> role.  It defaults to
 C<L<IPC::PrettyPipe::Execute::IPC::Run>>.
 
-=item renderer
+=item C<renderer>
 
 I<Optional>. The means by which the pipeline will be rendered.  It may
 be either a class name or an object reference, and must consume the
@@ -604,7 +604,7 @@ A command name (i.e. a string), for a command without arguments.
 =item *
 
 A string which matches a stream specification
-(L<IPC::PrettyPipe::Stream::Util/Stream Specification>), which will cause
+(L<IPC::PrettyPipe::Stream::Utils/Stream Specification>), which will cause
 a new I/O stream to be attached to the pipeline.  If the specification
 requires an additional parameter, the next value in C<@cmds> will be
 used for that parameter.
@@ -653,7 +653,7 @@ Execute the pipeline.
   $pipe->stream( $stream_spec, $file );
 
 Add an I/O stream to the pipeline.  See
-L<IPC::PrettyPipe::Stream::Util/Stream Specification> for more
+L<IPC::PrettyPipe::Stream::Utils/Stream Specification> for more
 information.
 
 =item B<streams>
@@ -683,11 +683,11 @@ are avaliable:
 
 =over
 
-=item firstvalue
+=item C<firstvalue>
 
 The first matched argument will be replaced with this value
 
-=item lastvalue
+=item C<lastvalue>
 
 The last matched argument will be replaced with this value.
 
