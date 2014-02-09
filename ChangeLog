@@ -1,4 +1,24 @@
-2014-02-07 06:17 -0500  djerius  <djerius@cfa.harvard.edu>  (5282c00d4fbe [tip])
+2014-02-09 07:57 -0500  djerius  <djerius@cfa.harvard.edu>  (097207292da1 [tip])
+
+	* .hgtags:
+	Added tag 0.01_03 for changeset 84e46200f9ab
+
+2014-02-09 07:56 -0500  djerius  <djerius@cfa.harvard.edu>  (84e46200f9ab [0.01_03])
+
+	* Changes, lib/IPC/PrettyPipe.pm:
+	update logs and version for release
+
+2014-02-09 07:56 -0500  djerius  <djerius@cfa.harvard.edu>  (1fe9fc574822)
+
+	* Makefile.PL:
+	fix requires for Win32 and Perl 5.10.x compatibility
+
+2014-02-09 07:55 -0500  djerius  <djerius@cfa.harvard.edu>  (869d14a4804c)
+
+	* MANIFEST.SKIP:
+	don't ship dev things
+
+2014-02-07 06:17 -0500  djerius  <djerius@cfa.harvard.edu>  (5282c00d4fbe)
 
 	* .hgtags:
 	Added tag 0.01_02 for changeset e4aac3c77db3
