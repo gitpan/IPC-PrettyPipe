@@ -45,7 +45,6 @@
       },
       "runtime" : {
          "requires" : {
-            "Exporter::Tiny" : "0",
             "IO::ReStoreFH" : "0.04",
             "IPC::Run" : "0",
             "List::MoreUtils" : "0",
@@ -87,5 +86,5 @@
          "url" : "http://bitbucket.org/djerius/ipc-prettypipe"
       }
    },
-   "version" : "0.03_01"
+   "version" : "0.03_02"
 }
