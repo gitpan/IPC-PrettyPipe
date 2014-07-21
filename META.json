@@ -45,6 +45,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Exporter::Tiny" : "0",
             "IO::ReStoreFH" : "0.04",
             "IPC::Run" : "0",
             "List::MoreUtils" : "0",
@@ -77,7 +78,7 @@
          }
       }
    },
-   "release_status" : "stable",
+   "release_status" : "testing",
    "resources" : {
       "bugtracker" : {
          "web" : "https://rt.cpan.org/Public/Dist/Display.html?Name=IPC-PrettyPipe"
@@ -86,5 +87,5 @@
          "url" : "http://bitbucket.org/djerius/ipc-prettypipe"
       }
    },
-   "version" : "0.03"
+   "version" : "0.03_01"
 }

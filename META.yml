@@ -30,6 +30,7 @@ no_index:
     - t
     - xt
 requires:
+  Exporter::Tiny: '0'
   IO::ReStoreFH: '0.04'
   IPC::Run: '0'
   List::MoreUtils: '0'
@@ -48,4 +49,4 @@ requires:
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=IPC-PrettyPipe
   repository: http://bitbucket.org/djerius/ipc-prettypipe
-version: '0.03'
+version: 0.03_01
