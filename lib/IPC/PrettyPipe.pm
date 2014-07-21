@@ -23,14 +23,13 @@ package IPC::PrettyPipe;
 
 ## no critic (RequireUseStrict)
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Carp;
 
-use List::Util qw[ sum ];
+use List::Util qw[ sum first ];
 use Module::Load qw[ load ];
-use Module::Path qw[ module_path ];
-use Module::Runtime 'compose_module_name';
+use Module::Runtime qw[ check_module_name compose_module_name use_package_optimistically ];
 use Safe::Isa;
 use Try::Tiny;
 
@@ -321,27 +320,27 @@ sub stream {
 
     my $self = shift;
 
-    my $op = shift;
+    my $spec = shift;
 
-    if ( $op->$_isa( 'IPC::PrettyPipe::Stream' ) ) {
+    if ( $spec->$_isa( 'IPC::PrettyPipe::Stream' ) ) {
 
         croak( "too many arguments\n" )
           if @_;
 
-        $self->streams->push( $op );
+        $self->streams->push( $spec );
 
     }
 
-    elsif ( !ref $op ) {
+    elsif ( !ref $spec ) {
 
         $self->streams->push(
-          IPC::PrettyPipe::Stream->new( op => $op, +@_ ? ( file => @_ ) : () )
+          IPC::PrettyPipe::Stream->new( spec => $spec, +@_ ? ( file => @_ ) : () )
 			     );
     }
 
     else {
 
-        croak( "illegal stream operator\n" );
+        croak( "illegal stream specification\n" );
 
     }
 
@@ -409,10 +408,17 @@ sub _backend_factory {
 
     my ( $self, $type, $req ) = ( shift, shift, shift );
 
-    my $module = compose_module_name( "IPC::PrettyPipe::$type", $req );
+    check_module_name( $req );
 
-    croak( "unknown $type ($req => $module)\n" )
-      unless defined module_path( $module );
+    my $role = compose_module_name( __PACKAGE__,
+				    { Render => 'Renderer',
+				      Execute => 'Executor'}->{$type} );
+
+    my $module = first { use_package_optimistically($_)->DOES( $role ) } $req,
+	  compose_module_name( "IPC::PrettyPipe::$type", $req );
+
+    croak( "requested $type module ($req) either doesn't exist or doesn't consume $role\n" )
+      if ! defined $module;
 
     load $module;
 
@@ -491,7 +497,7 @@ B<L<IPC::PrettyPipe::DSL>>.
 
 B<L<IPC::PrettyPipe>> doesn't render a pipeline directly; instead it
 passes that job on to another object (which must consume the
-B<L<IPC::PrettyPipe::Render>> role).
+B<L<IPC::PrettyPipe::Renderer>> role).
 
 By default B<IPC::PrettyPipe> provides a renderer which uses
 B<L<Template::Tiny>> to render a pipeline as if it were to be fed to a
@@ -504,7 +510,7 @@ replaced via the B<L</renderer>> attribute.
 
 Just as with rendering, B<IPC::PrettyPipe> doesn't execute a pipeline
 on its own.  Instead it calls upon another object (which must consume
-the B<L<IPC::PrettyPipe::Execute>> role).  By default it provides an
+the B<L<IPC::PrettyPipe::Executor>> role).  By default it provides an
 executor which uses B<L<IPC::Run>> to run the pipeline.  The executor
 may be replaced via the B<L</executor>> attribute.
 
@@ -634,6 +640,13 @@ arguments; it does not affect existing arguments.
 
 See B<L<IPC::PrettyPipe::Arg>> for more information.
 
+=item B<cmds>
+
+  $cmds = $pipe->cmds;
+
+Return a B<L<IPC::PrettyPipe::Queue>> object containing the
+B<L<IPC::PrettyPipe::Cmd>> objects associated with the pipe.
+
 =item B<render>
 
   my $string = $pipe->render
@@ -660,8 +673,8 @@ information.
 
   $streams = $pipe->streams
 
-Return the streams associated with the command as an arrayref of
-B<L<IPC::PrettyPipe::Stream>> objects.
+Return a B<L<IPC::PrettyPipe::Queue>> object containing the
+B<L<IPC::PrettyPipe::Stream>> objects associated with the pipe.
 
 =item B<valmatch>
 

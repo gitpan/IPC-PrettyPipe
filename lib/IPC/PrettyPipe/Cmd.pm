@@ -41,6 +41,8 @@ use IPC::PrettyPipe::Types -all;
 use IPC::PrettyPipe::Queue;
 use IPC::PrettyPipe::Arg::Format;
 
+use String::ShellQuote 'shell_quote';
+
 with 'IPC::PrettyPipe::Queue::Element';
 
 IPC::PrettyPipe::Arg::Format
@@ -115,6 +117,8 @@ sub BUILD {
 
     return;
 }
+
+sub quoted_cmd {  shell_quote( $_[0]->cmd )  }
 
 sub add {
 
@@ -548,10 +552,10 @@ This will override the format attributes for this argument only.
 
 =item B<args>
 
-  $args = $cmd->args
+  $args = $cmd->args;
 
-Returns an B<L<IPC::PrettyPipe::Queue>> object containing the
-arguments associated with the command.
+Return a B<L<IPC::PrettyPipe::Queue>> object containing the
+B<L<IPC::PrettyPipe::Arg>> objects associated with the command.
 
 =item B<argpfx>,
 
@@ -569,6 +573,13 @@ affects new, not existing, arguments;
   $name = $cmd->cmd
 
 Return the name of the command.
+
+=item B<quoted_cmd>
+
+  $name = $cmd->quoted_cmd
+
+Return the name of the command, appropriately quoted for passing as a
+single word to a Bourne compatible shell.
 
 =item B<ffadd>
 
@@ -632,8 +643,8 @@ See B<L<IPC::PrettyPipe::Stream>> for more information.
 
   $streams = $cmd->streams
 
-Return an B<L<IPC::PrettyPipe::Queue>> object containing the streams
-associated with the command.
+Return a B<L<IPC::PrettyPipe::Queue>> object containing the
+B<L<IPC::PrettyPipe::Stream>> objects associated with the command.
 
 =item B<valmatch>
 
