@@ -48,4 +48,4 @@ requires:
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=IPC-PrettyPipe
   repository: http://bitbucket.org/djerius/ipc-prettypipe
-version: 0.03_02
+version: 0.03_03
